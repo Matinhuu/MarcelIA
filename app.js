@@ -1,4 +1,6 @@
 import * as funcao from './funcoes.js'
+let op;
 await funcao.apresentacao()
 await funcao.menu()
-let escolhas =  funcao.escolhas()
+op =  funcao.escolhas()
+await funcao.viagens(op)

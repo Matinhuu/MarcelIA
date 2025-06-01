@@ -8,6 +8,8 @@ let geromel = `1. Bertioga
 6. São Sebastião
 7. Maragogi
 0. Sair`
+// geromel serve para facilitar a digitalização do menu "console.log(geromel)"
+
 export async function apresentacao(){
 console.log(`Olá sou MarcelIA`);
 await sleep(500);
@@ -15,42 +17,27 @@ console.log(`Sua assistente virtual de viagens da VoeLivre`);
 await sleep(500);
 }
 
+export async function menu(){
+let repeticao = true
+console.log(`Qual o seu destino?`);
+console.log(geromel);
+}
+
 export async function escolhas() {
   let escolha = Number(ler());
   return escolha;
 }
 
-export async function menu(){
-let repeticao = true
-while (repeticao) {
-  console.log(`Qual seria seu destino: `);
-  await sleep(800);
-  console.log('1. Bertioga');
-  await sleep(300);
-  console.log('2. Santos');
-  await sleep(300);
-  console.log('3. Ubatuba');
-  await sleep(300);
-  console.log('4. Guaruja');
-  await sleep(300);
-  console.log('5. Ilhabela');
-  await sleep(300);
-  console.log('6. São Sebastião');
-  await sleep(300);
-  console.log('7. Maragogi');
-  await sleep(300);
-  console.log('0. Sair');
-  funcao.escolhas()
-}
-}
 
-export async function viagens(escolhas) {
+
+export async function viagens(op) {
   let respostas;
-  if (escolhas == 1) {
-    respostas = "Para Bertioga temos os seguintes planos de viagens:" 
-    console.log(geromel)
+  if (op == 1) {
+    respostas = "Para Bertioga temos os seguintes planos de viagens:"
   }
 }
+
+
 function sleep(milisegundos) {
     return new Promise((ok, nok) => {
       setTimeout(ok, milisegundos);
